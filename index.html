@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Break Free — Privacy Policy</title>
+<meta name="description" content="Privacy policy for the Break Free Android app.">
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #ffffff; --fg: #16201c; --muted: #55635d;
+    --rule: #dfe6e2; --accent: #0d7a5f; --code-bg: #f2f5f3;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0d1512; --fg: #e6efea; --muted: #9fb0a8;
+      --rule: #24322c; --accent: #6fe3b0; --code-bg: #16211d;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 2.5rem 1.25rem 6rem;
+    background: var(--bg); color: var(--fg);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif;
+  }
+  main { max-width: 46rem; margin: 0 auto; }
+  h1 { font-size: 1.9rem; line-height: 1.2; margin: 0 0 1.5rem; }
+  h2 { font-size: 1.35rem; margin: 2.75rem 0 .75rem; color: var(--accent); }
+  h3 { font-size: 1.1rem; margin: 2rem 0 .5rem; }
+  p { margin: 0 0 1rem; }
+  ul { margin: 0 0 1rem; padding-left: 1.25rem; }
+  li { margin: .3rem 0; }
+  hr { border: 0; border-top: 1px solid var(--rule); margin: 2.25rem 0; }
+  code {
+    background: var(--code-bg); padding: .1em .35em;
+    border-radius: .25em; font-size: .9em;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    overflow-wrap: anywhere;
+  }
+  /* Wide tables scroll inside their own box rather than the page. */
+  table { display: block; overflow-x: auto; width: 100%; border-collapse: collapse;
+           margin: 0 0 1.25rem; font-size: .94rem; }
+  th, td { border: 1px solid var(--rule); padding: .5rem .6rem;
+            text-align: left; vertical-align: top; }
+  th { background: var(--code-bg); font-weight: 600; }
+  .draft {
+    border: 2px solid #b3261e; background: #b3261e; color: #fff;
+    padding: .9rem 1rem; border-radius: .4rem; margin: 0 0 2rem;
+    font-weight: 600;
+  }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+<h1>Break Free — Privacy Policy</h1>
+<p><strong>Effective date:</strong> 26 August 2026 <strong>Last updated:</strong> 26 August 2026 <strong>Applies to:</strong> Break Free for Android, package <code>net.gogizmo.breakfree</code>, from version 1.0.0 (versionCode 100). Every field list below is pinned to what version 1.0.0 stores.</p>
+<hr>
+<h2>The short version</h2>
+<p>Break Free keeps what you type on your phone. <strong>The app itself holds no internet permission</strong>, so it has no route to send anything anywhere — not to us, not to anybody. There is no account, no sign-in, no analytics, no advertising and no tracking of any kind.</p>
+<p>Android&#x27;s own backup is a separate mechanism, and it is the one exception. We would rather lead with it than bury it: <strong>if Android&#x27;s backup is switched on, Android copies this app&#x27;s data to your Google account</strong>, so a new phone does not cost you your streak. That copy is in your account, not ours. We cannot see it or reach it. You can switch it off, and the section below says how.</p>
+<p>Everything else on this page is the detail behind those two paragraphs.</p>
+<hr>
+<h2>What Break Free stores, and where</h2>
+<p>All of it lives in two files in the app&#x27;s own private storage on your phone (<code>files/datastore/</code>). On a phone that has not been rooted, no other app can read them. Break Free itself creates no database, no shared-preferences file, and writes nothing anywhere else on your phone unless you export a file yourself.</p>
+<p>The lists below are complete for what the app writes. They use the real key names, so you can check them against an exported file.</p>
+<h3>File 1 — <code>quit_profile</code></h3>
+<table>
+  <thead>
+    <tr>
+      <th>Stored as</th>
+      <th>What it is</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>quit_at_epoch_seconds</code></td>
+      <td>The moment you quit, or the moment you have set to quit</td>
+    </tr>
+    <tr>
+      <td><code>nicotine_product</code></td>
+      <td>Which product: <code>Cigarettes</code>, <code>HeatedTobacco</code>, <code>Vape</code>, <code>Pouches</code> or <code>Other</code></td>
+    </tr>
+    <tr>
+      <td><code>usage_measure</code></td>
+      <td>How you count it: <code>Cigarette</code>, <code>TobaccoGrams</code>, <code>HeatedStick</code>, <code>Puff</code>, <code>Disposable</code>, <code>Pod</code>, <code>Liquid</code>, <code>Pouch</code> or <code>Generic</code></td>
+    </tr>
+    <tr>
+      <td><code>units_per_day</code></td>
+      <td>How much you used per day before quitting — always the daily average, whatever period you answered in</td>
+    </tr>
+    <tr>
+      <td><code>usage_period</code></td>
+      <td>Whether you answered that question per day, week or month</td>
+    </tr>
+    <tr>
+      <td><code>units_per_period</code></td>
+      <td>The number exactly as you typed it, in that period — kept so editing your profile hands back what you wrote. Absent when you answered per day</td>
+    </tr>
+    <tr>
+      <td><code>units_per_container</code></td>
+      <td>How many units are in a pack, tin, pod or bottle</td>
+    </tr>
+    <tr>
+      <td><code>container_price</code></td>
+      <td>What that pack, tin, pod or bottle costs</td>
+    </tr>
+    <tr>
+      <td><code>currency_symbol</code></td>
+      <td>Up to five characters — Serbia&#x27;s «дин.» is four — guessed from your phone&#x27;s locale, and pickable from the whole ISO currency table</td>
+    </tr>
+    <tr>
+      <td><code>quit_reason</code></td>
+      <td><strong>Your own words</strong> for why you are doing this. Free text, up to 240 characters</td>
+    </tr>
+    <tr>
+      <td><code>completed_prep_steps</code></td>
+      <td>Which of the preparation steps <strong>you tick yourself</strong>, as short ids: <code>tell</code>, <code>help</code>, <code>clear</code>, <code>first-days</code>, <code>money</code>, and <code>prescriber</code> (that last one is only offered for cigarettes and heated tobacco). The other three steps on that screen — picking the day, writing your reason, learning your triggers — are worked out by the app from your profile and your log, and are not stored here</td>
+    </tr>
+    <tr>
+      <td><code>user_content_json</code></td>
+      <td>Everything you have written for yourself — broken out below</td>
+    </tr>
+    <tr>
+      <td><code>user_content_json_backup</code></td>
+      <td>A salvage copy. If the file above ever fails to load, it is parked here rather than overwritten, so what you wrote is not lost</td>
+    </tr>
+    <tr>
+      <td><code>show_money_saved</code></td>
+      <td>Whether the money tally is shown</td>
+    </tr>
+    <tr>
+      <td><code>high_contrast</code></td>
+      <td>Whether the higher-contrast palette is on</td>
+    </tr>
+    <tr>
+      <td><code>help_region</code></td>
+      <td>A two-letter country code, and <strong>only if you have asked the help sheet to show another country&#x27;s lines</strong> — say you live abroad and your phone is set to where you came from. Absent unless you picked one, and removed again the moment you tap &quot;Use my region&quot;. It is a country, never a location: the app holds no permission that could find where you are, and this is whatever you tapped in a list</td>
+    </tr>
+    <tr>
+      <td><code>app_lock</code></td>
+      <td>Whether opening the app asks for your screen lock first. The yes/no comes from your phone; nothing biometric is stored</td>
+    </tr>
+    <tr>
+      <td><code>nudges_enabled</code></td>
+      <td>Whether you switched the check-in notifications on</td>
+    </tr>
+    <tr>
+      <td><code>nudges_fewer</code></td>
+      <td>Whether you asked for fewer of them</td>
+    </tr>
+    <tr>
+      <td><code>nudge_last_milestone</code></td>
+      <td>Which recovery milestone a notification last mentioned, so none is mentioned twice</td>
+    </tr>
+    <tr>
+      <td><code>nudge_last_rank</code></td>
+      <td>The highest rank a notification has mentioned, so a rank that dips and heals is not re-announced</td>
+    </tr>
+    <tr>
+      <td><code>nudge_last_checkin_day</code></td>
+      <td>The day of the most recent check-in notification</td>
+    </tr>
+    <tr>
+      <td><code>nudge_last_opened_day</code></td>
+      <td>The day you last opened the app — kept <strong>only while check-ins are on</strong>, so a reminder can stay quiet on a day you were already in</td>
+    </tr>
+    <tr>
+      <td><code>nudge_ignored_streak</code></td>
+      <td>How many notifications in a row went unanswered. At seven, they stop by themselves until you next open the app</td>
+    </tr>
+  </tbody>
+</table>
+<h4>Inside <code>user_content_json</code></h4>
+<table>
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>What it holds</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>plans</code></td>
+      <td>Your if-then plans, at most eleven. Each one: <code>trigger</code> (which situation), <code>cue</code> (<strong>your text</strong>, up to 80 characters), <code>response</code> (<strong>your text</strong>, up to 120), <code>coping</code> (which coping action, or none), <code>created_at</code></td>
+    </tr>
+    <tr>
+      <td><code>commitment</code></td>
+      <td><code>statement</code> (<strong>your commitment, in your words</strong>, up to 240 characters), <code>written_at</code>, <code>affirmed_at</code> (when you last re-affirmed it)</td>
+    </tr>
+    <tr>
+      <td><code>goals</code></td>
+      <td>What you are saving for, at most three. Each one: <code>id</code>, <code>name</code> (<strong>your text</strong>, up to 60 characters), <code>target</code> (<strong>an amount of money you type</strong>, between 1 and 1,000,000), <code>created_at</code>, <code>prompted_at</code>, <code>claimed_at</code></td>
+    </tr>
+    <tr>
+      <td><code>quit_kit</code></td>
+      <td>What you are using to quit: <code>method</code> (a category only — <code>CombinationNrt</code>, <code>Patch</code>, <code>FastActing</code>, <code>PrescribedTablet</code>, <code>Something</code> or <code>None</code>), <code>started_at</code>, <code>course_weeks</code>. <strong>Never a dose, a strength or a brand — the app does not ask and has nowhere to put one</strong></td>
+    </tr>
+    <tr>
+      <td><code>quit_kit_log</code></td>
+      <td><code>doses</code> (the moments you confirmed taking it, up to 1,000 of them) and <code>reviewed_at</code> (when you last said you had spoken to a prescriber)</td>
+    </tr>
+    <tr>
+      <td><code>quit_route</code></td>
+      <td><code>route</code> (<code>Abrupt</code> or <code>Gradual</code>) and <code>chosen_at</code></td>
+    </tr>
+    <tr>
+      <td><code>quit_date_pushes</code></td>
+      <td>The moments you moved your quit date later</td>
+    </tr>
+    <tr>
+      <td><code>milestone_seen_at</code></td>
+      <td>When you last pressed &quot;Noted&quot; on a recovery milestone. One moment, and nothing about which milestone it was</td>
+    </tr>
+  </tbody>
+</table>
+<h3>File 2 — <code>smoke_log</code></h3>
+<table>
+  <thead>
+    <tr>
+      <th>Stored as</th>
+      <th>What it is</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>smoke_log_state_json</code></td>
+      <td>Your craving log — broken out below</td>
+    </tr>
+    <tr>
+      <td><code>smoke_log_state_json_backup</code></td>
+      <td>The same salvage copy arrangement as above</td>
+    </tr>
+  </tbody>
+</table>
+<h4>Inside <code>smoke_log_state_json</code></h4>
+<p>One list, <code>events</code>. Every craving you log is one entry, whether you beat it or not:</p>
+<table>
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>What it holds</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>id</code></td>
+      <td>An id for that entry, generated on your phone</td>
+    </tr>
+    <tr>
+      <td><code>timestamp</code></td>
+      <td>When it happened</td>
+    </tr>
+    <tr>
+      <td><code>intensity</code></td>
+      <td>How strong it was, 1 to 5</td>
+    </tr>
+    <tr>
+      <td><code>trigger</code></td>
+      <td>What set it off: <code>Stress</code>, <code>Coffee</code>, <code>Alcohol</code>, <code>Meal</code>, <code>Boredom</code>, <code>Social</code>, <code>Driving</code>, <code>Break</code>, <code>LowMood</code>, <code>Habit</code> or <code>Other</code></td>
+    </tr>
+    <tr>
+      <td><code>outcome</code></td>
+      <td><code>Resisted</code> or <code>Slipped</code></td>
+    </tr>
+    <tr>
+      <td><code>cigarettesSmoked</code></td>
+      <td>How many, when the craving won. Always zero when it did not</td>
+    </tr>
+    <tr>
+      <td><code>coping</code></td>
+      <td>What you did about it: <code>Breathe</code>, <code>Water</code>, <code>Move</code>, <code>Hands</code>, <code>Delay</code>, <code>Reach</code>, <code>Reason</code>, or nothing</td>
+    </tr>
+    <tr>
+      <td><code>rodeOutSeconds</code></td>
+      <td>How long you rode it out before recording an outcome</td>
+    </tr>
+    <tr>
+      <td><code>note</code></td>
+      <td><strong>Your own note on that craving.</strong> Free text, up to 120 characters</td>
+    </tr>
+    <tr>
+      <td><code>usedPlanTrigger</code></td>
+      <td>Which of your plans you followed, if you followed one</td>
+    </tr>
+    <tr>
+      <td><code>cravingFor</code></td>
+      <td>What the craving was *for*, if you said — <code>Cigarettes</code>, <code>HeatedTobacco</code>, <code>Vape</code>, <code>Pouches</code> or <code>Other</code>. Empty when you did not say, which is the normal case: nothing is pre-selected, so this is only ever here because you tapped it</td>
+    </tr>
+    <tr>
+      <td><code>spent</code></td>
+      <td>What a slip cost, <strong>only if you chose to say</strong> — you told the app you bought something for it and typed the amount. Empty otherwise, and empty for every craving you beat</td>
+    </tr>
+    <tr>
+      <td><code>ownedAlready</code></td>
+      <td>Whether you said the slip was something you already owned, so it should not count against your savings. False unless you tapped it</td>
+    </tr>
+    <tr>
+      <td><code>mood</code></td>
+      <td>How you said you were feeling: <code>Low</code>, <code>Tense</code>, <code>Flat</code>, <code>Okay</code> or <code>Good</code>. Empty when you did not say — nothing is pre-selected, so this is only ever here because you tapped it</td>
+    </tr>
+  </tbody>
+</table>
+<h3>The free-text fields, and what you can put in them</h3>
+<p>Six fields take words rather than choices: your reason (240 characters), your commitment statement (240), each plan&#x27;s cue (80) and response (120), each goal&#x27;s name (60), and the note on a logged craving (120). The app does not read them, filter them or check them. <strong>Anything you type there is stored exactly as typed</strong> — including, if you choose to write it, your name, another person&#x27;s name, or a health detail. All of it is covered by the Android backup described below.</p>
+<h3>What is deliberately not stored</h3>
+<p>Everything the app shows you beyond the above — days quit, money saved, streaks, ranks, XP, pillar levels, milestone progress, your riskiest hour, the trigger that beats you — is worked out from the fields above every time the screen is drawn. None of it is written down. That is why correcting a wrong price or a wrong quit date corrects your whole history at once.</p>
+<p>The app never asks for your name, your email address, your age, your sex, your phone number or your location, and there is nowhere in it for any of those to go. It reads your phone&#x27;s locale to guess a currency symbol and to decide which quitline to show you; the currency symbol is saved with your profile, and the country your locale names is not saved anywhere. The only country the app ever stores is <code>help_region</code> above — one you tapped by hand, never one it worked out.</p>
+<hr>
+<h2>What leaves your phone</h2>
+<h3>Nothing reaches us from the app</h3>
+<p>Break Free contains no networking code of any kind, and it holds no internet permission. It is not that we choose not to send your data — the app has no route to. This is checkable: it is the one thing about an Android app you can verify from the outside.</p>
+<h3>Android&#x27;s own backup — the one exception</h3>
+<p><code>android:allowBackup</code> is switched on, on purpose. If Android&#x27;s backup is on for your phone, Android copies this app&#x27;s data folder to your Google account, so replacing a lost phone does not cost you your quit history.</p>
+<p>To be exact about what that covers:</p>
+<ul>
+  <li><strong>Everything</strong> in both files above goes — including your free text, your salvage copies and your dose history. The backup rules name the app&#x27;s data folder and nothing else, so nothing else the app writes is included.</li>
+  <li>Both <strong>cloud backup</strong> and <strong>direct device-to-device transfer</strong> to a new phone are included.</li>
+  <li>On Android 9, 10 and 11 this is governed by the app&#x27;s <code>backup_rules.xml</code>; on Android 12 and later by its <code>data_extraction_rules.xml</code>. The two files say the same thing, on purpose.</li>
+</ul>
+<p>That copy sits in your Google account, under Google&#x27;s own terms and Google&#x27;s own security. <strong>We have no access to it whatsoever</strong>, and no way to ask for it.</p>
+<p><strong>Turning it off.</strong> It is an Android setting, not one of ours — there is no switch for it inside the app. On most phones it is under <strong>Settings → Google → Backup</strong> (on some versions, <strong>Settings → Google → All services → Backup</strong>; some manufacturers put it under <strong>Settings → System → Backup</strong>). Turning it off stops future backups. A backup already made is managed where Google lets you manage it — usually the Google One app, under Storage → Backups.</p>
+<p>If you use &quot;Erase everything&quot; in the app, the device copy is gone immediately. <strong>The copy in your Google account is not touched by that</strong> — nothing in the app can reach it. If you want that copy gone, delete it from your Google account directly. Until you do, a later restore can bring your history back.</p>
+<h3>Files you export yourself</h3>
+<p>The app can write a JSON or CSV file, and only when you ask it to and only where you choose to put it. From that moment the file is an ordinary file on your phone and is out of the app&#x27;s hands. If you put it in a synced folder, it syncs. If you email it to a doctor, they have it.</p>
+<ul>
+  <li>The <strong>JSON</strong> file contains your profile, your complete craving log, and the whole of <code>user_content_json</code> — your plans, your commitment, your goals, your quit kit and its dose dates, your chosen route, any times you moved your quit date, and when you last acknowledged a recovery milestone. It does <strong>not</strong> contain three settings (which preparation steps you ticked, whether the money tally is shown, whether higher contrast is on) or either salvage copy described above.</li>
+  <li>The <strong>CSV</strong> file contains one row per logged craving, with nine columns: timestamp, outcome, units, unit name, intensity, trigger, coping action, seconds ridden out, and your note. It does <strong>not</strong> contain your reason, your commitment, your plans, your goals or your quit kit.</li>
+</ul>
+<h3>Handing off to other apps</h3>
+<p>Break Free can hand something to another app on your phone. In each case it hands it over and stops:</p>
+<ul>
+  <li><strong>Calling a quitline or crisis line.</strong> The app opens your dialer with the number filled in. It cannot place a call — that needs a permission it does not have, and you press the button. The number comes from a fixed table inside the app, matched to your phone&#x27;s country; nothing is looked up online.</li>
+  <li><strong>Sending feedback.</strong> The app opens your email app with our address and a subject line filled in. It adds no body and no attachment. You decide what to send and whether to send it. If you do send it, we then have your email address and whatever you wrote — see *Email you send us*, below.</li>
+  <li><strong>Saving an export.</strong> The app opens Android&#x27;s own file picker. You choose where the file goes.</li>
+</ul>
+<p>The launcher shortcuts (&quot;Ride it out&quot;, &quot;Get help&quot;) only ever open Break Free itself, and carry no information about you.</p>
+<h3>One thing worth knowing about your own screen</h3>
+<p>The optional home-screen widget puts a number on your home screen, and the two shortcuts appear when someone long-presses the app icon. Both were deliberately written <strong>not to out you</strong>: the widget shows a count, its unit and a short grade badge (&quot;C&quot;, &quot;B+&quot;, &quot;∞&quot;), and neither it nor the shortcut labels contains the words smoke, cigarette, vape, nicotine, quit or clean — an automated test fails the build if any of them appears. The rank badge is used instead of the rank name for exactly this reason: one of the eleven rank names is &quot;Non-smoker&quot;, and it must never appear on a home screen.</p>
+<p>That said, the widget does draw a rising count where anyone holding your phone can see it, and the launcher does render it in another app&#x27;s process. If you would rather nobody saw anything at all, do not add the widget. It is entirely your choice, and the app works identically without it.</p>
+<hr>
+<h2>Permissions</h2>
+<p><strong>Break Free asks you for two permissions, and neither can move data anywhere.</strong> No internet, no storage, no contacts, no location, no camera, no microphone, no phone — an automated test fails the build if any permission beyond these two ever appears.</p>
+<ul>
+  <li><strong>Notifications</strong> (<code>POST_NOTIFICATIONS</code>), for the optional check-in programme. Asked only from the Settings toggle that uses it, never on first launch, and declining leaves the app fully working. A notification is drawn by your phone; the app still has no way to reach a network, so nothing about a notification travels anywhere.</li>
+  <li><strong>The fingerprint or face sensor</strong> (<code>USE_BIOMETRIC</code>), for the optional app lock. A yes/no from the sensor hardware to the screen lock — the app never sees, stores or could transmit anything biometric.</li>
+</ul>
+<p>One technical note, because we would rather over-explain than overclaim. The manifest that actually ships is assembled from ours plus the standard Google support libraries the app is built with, and it contains two things worth naming:</p>
+<ul>
+  <li>A single permission the app <strong>defines for itself and grants only to itself</strong>: <code>com.om3g4.breakfree.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</code>, at &quot;signature&quot; level, added by a standard Google support library so that one component inside the app can talk to another component inside the app. Only software signed with the same key can hold it. It is not one of Android&#x27;s permissions, it gives Break Free access to nothing on your phone, and it has nothing to do with the network.</li>
+  <li>One component from a standard Google support library (<code>androidx.profileinstaller.ProfileInstallReceiver</code>) that other software on the device can address, but only if that software holds Android&#x27;s <code>DUMP</code> permission — a permission ordinary apps cannot get. It exists to let the system install a performance profile. It touches none of your data.</li>
+</ul>
+<p>Neither changes the position above: there is no <code>android.permission.INTERNET</code> anywhere in the shipped app.</p>
+<hr>
+<h2>No analytics, no advertising, no tracking, no account</h2>
+<ul>
+  <li><strong>No analytics.</strong> No usage statistics, no event logging, no session recording, no heatmaps.</li>
+  <li><strong>No advertising.</strong> No ad networks, no ad identifiers, no in-app purchases, no payment of any kind.</li>
+  <li><strong>No tracking.</strong> No advertising ID, no device fingerprinting, no cross-app or cross-site tracking, no profiles built about you.</li>
+  <li><strong>No third-party SDKs of that kind at all.</strong> Break Free is built on open-source libraries, and some of them do ship inside the app — the full list, with licences, is in the app under *Settings → Open-source licences*. None of them can send anything anywhere, because the app has no internet permission. That is true regardless of what any of them could do in an app that did.</li>
+  <li><strong>No account.</strong> There is nothing to sign up for, nothing to log in to, no password, no profile on any server. There is no server.</li>
+</ul>
+<hr>
+<h2>Crash reports</h2>
+<p>Break Free contains no crash-reporting code of any kind. If it crashes, the app sends nothing, because it cannot.</p>
+<p>Separately from the app, Google Play shows developers crash and ANR reports gathered by Android itself (Android Vitals), and only from people who turned on diagnostics sharing in their own Android settings. That is Google&#x27;s mechanism, not ours: we did not build it, we cannot switch it on for you, and we cannot ask it for anything about a particular person. You control it in your own Android settings, usually under <strong>Settings → Google → Usage &amp; diagnostics</strong>.</p>
+<p>We will not promise you what a crash report does or does not contain, because its contents are Google&#x27;s business and not something we can inspect or guarantee. What we can state as fact is what this app does: it has no reporting code and no way to send one.</p>
+<hr>
+<h2>What we receive from Google Play</h2>
+<p>As the app&#x27;s developer we see what Google Play shows every developer: aggregate, anonymous figures for installs, uninstalls, ratings, countries and device types; any public review you choose to write (which carries whatever name your Google account shows); and the Android Vitals crash and ANR reports described above, from people who opted into diagnostics sharing. None of the install, rating or review figures is connected to anything inside the app, and none of it tells us anything about your quit, your log or your notes. We deliberately do not extend that promise to crash traces, for the reason given in the section above.</p>
+<hr>
+<h2>Email you send us</h2>
+<p>If you write to us, we have your email address and whatever you put in it, in an ordinary mailbox. That is the only circumstance in which we hold anything about you at all. We use it to answer you and to fix what you reported. We do not add it to any list, and there is no list. Ask us to delete the correspondence and we will.</p>
+<p>Please do not send us your exported data unless you actually want us to have it. We do not need it to help.</p>
+<hr>
+<h2>Deleting your data, and taking it with you</h2>
+<ul>
+  <li><strong>Delete it.</strong> *Settings → Erase everything.* You have to type the word <code>ERASE</code>, because it cannot be undone. It clears both files — your quit date, your settings, every craving and slip, every plan, your commitment, your goals, your quit kit and dose history, your notes, and both salvage copies. Exactly one thing survives, deliberately: whether the higher-contrast palette is on. It records nothing about you or your quit, and you would need it to read the screen telling you the erase worked.</li>
+  <li><strong>Note what erasing does not reach.</strong> If Android backup was on, the copy in your Google account is untouched by the button in the app, and a later restore can bring your history back. Delete that copy from your Google account if you want it gone.</li>
+  <li><strong>Uninstall.</strong> Removing the app removes both files with it. The Google-account copy, again, is Google&#x27;s to hold and yours to remove.</li>
+  <li><strong>Take it with you.</strong> *Settings → Export JSON* or *Export CSV*, described above. Export before you erase if you want a copy.</li>
+</ul>
+<p>Because we hold nothing, there is no &quot;delete my account&quot; to request and no request form to fill in. The delete button is the whole mechanism, and it works whether or not anybody reads this page.</p>
+<hr>
+<h2>Children</h2>
+<p>Break Free is for adults who use tobacco or nicotine. It is submitted for an <strong>18 and over</strong> audience, it refers to tobacco throughout, and it is not directed at children. It is not enrolled in Google Play&#x27;s Designed for Families programme. We do not knowingly collect anything from anyone of any age — because we do not collect anything from anyone.</p>
+<hr>
+<h2>If you are in the UK or the EU (UK GDPR / GDPR)</h2>
+<p>The plain position: <strong>no personal data about you is transmitted to us, so there is nothing for us to process, store, share, sell or transfer.</strong> What you type stays on your device, under your control, and — if you leave Android backup on — in your own Google account, where Google&#x27;s terms apply and we have no part.</p>
+<p>Because nothing reaches us, we are not a controller or a processor of anything in the app. Your rights of access, rectification, erasure, restriction, objection and portability all still exist; they simply resolve on your own device, where you can already see everything (it is on the screen), correct it (Settings), export it (JSON or CSV — that is portability, in a machine-readable format) and delete it (Erase everything), without asking anyone&#x27;s permission.</p>
+<p>The one exception is email you send us, described above. There we hold what you sent, we use it to reply to you and improve the app, and you can ask us to delete it.</p>
+<p>There is no international transfer of your data by us, because there is no transfer of your data by us.</p>
+<hr>
+<h2>If you are in California (CCPA / CPRA)</h2>
+<p>We do not collect personal information through this app, so there is none to disclose, none to correct, and none to delete on request. We <strong>do not sell</strong> personal information and <strong>do not share</strong> it for cross-context behavioural advertising — we have never done either, and the app has no technical means to. We do not offer financial incentives in exchange for personal information. We do not use or disclose sensitive personal information for any purpose beyond those permitted, because we do not receive any.</p>
+<p>Your rights to know, delete, correct, and to opt out of sale or sharing are unaffected. As above, they resolve on your own device. If you would like written confirmation of any of this, email us and ask; we will not require you to create an account to do so, because there are no accounts.</p>
+<hr>
+<h2>Health information: what this app is and is not</h2>
+<p><strong>We are not a HIPAA covered entity, and not a business associate of one.</strong> HIPAA governs healthcare providers, health plans, healthcare clearinghouses and the firms working on their behalf. Break Free is none of those. It is a self-help app you install yourself, it is not connected to any clinician, insurer or health system, and no information in it is transmitted to us in the first place.</p>
+<p><strong>Break Free is not a medical device.</strong> The app says so on its own screens: *&quot;Break Free is not a medical device. It does not diagnose, treat, cure or prevent any medical condition, and it is not medical advice.&quot;*</p>
+<p>It is worth adding what the app also says about itself: apps like this one have not been shown in trials to raise quit rates, and Break Free&#x27;s own evidence page grades its own counter, ranks and tallies before it grades anything else. What does have good evidence is stop-smoking medicine and support from a person. A pharmacist or your doctor can tell you what suits you.</p>
+<p>The app records only a <strong>category</strong> of what you are quitting with — never a dose, a strength, a brand or a schedule. It has nowhere to put one.</p>
+<p>If you export your log and hand it to a doctor or a stop-smoking adviser — which the CSV file exists for — that is your decision, and from that point the information is in their hands under whatever rules govern them.</p>
+<hr>
+<h2>About this page itself</h2>
+<p>This page is hosted on GitHub Pages. Like any web page, visiting it means your browser makes a request to that host, which may record ordinary server information such as your IP address and browser type. That is the host&#x27;s doing, not the app&#x27;s, and it is governed by [GitHub&#x27;s Privacy Statement](https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement). Reading this page is not required to use Break Free, and the app works identically whether you open it or not.</p>
+<hr>
+<h2>Changes to this policy</h2>
+<p>If anything about the app changes what this page says, this page is updated first, and the effective date at the top changes with it. The app&#x27;s release checklist requires the policy to be live and to match what the app actually does before every release. If a change ever meant that data left your phone in some new way, it would be stated here at the top, in plain words, before the version shipped.</p>
+<hr>
+<h2>Contact</h2>
+<p><strong>info@go-gizmo.net</strong></p>
+<p>Developer: Chris Joubert</p>
+<p>You can reach the same address from inside the app: *Settings → Something wrong? → Send feedback*. Please include the version number shown on that screen.</p>
+<hr>
+<h2>Not legal advice</h2>
+<p>This document describes, in plain language, what the app actually does, verified against the app&#x27;s own source and its release build. It is written by the developer and it is <strong>not legal advice</strong>. It has not been reviewed by a lawyer. If you rely on this page for anything beyond understanding how Break Free treats your data, get it checked by someone qualified in your jurisdiction.</p>
+</main>
+</body>
+</html>
