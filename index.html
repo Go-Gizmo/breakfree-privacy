@@ -115,6 +115,22 @@
       <td><strong>Your own words</strong> for why you are doing this. Free text, up to 240 characters</td>
     </tr>
     <tr>
+      <td><code>switching_to_vape</code></td>
+      <td>Whether you told the app your cigarette quit is being carried by a vape. A yes/no, only ever meaningful for cigarettes — the app clears it if your product is anything else</td>
+    </tr>
+    <tr>
+      <td><code>tool_cost</code></td>
+      <td>What you said that vape costs, per the period below, so the money tally can be honest about what the switch is spending. Absent unless you stated one</td>
+    </tr>
+    <tr>
+      <td><code>tool_cost_period</code></td>
+      <td>Whether you stated that cost per day, week or month</td>
+    </tr>
+    <tr>
+      <td><code>tool_quit_at_epoch_seconds</code></td>
+      <td>The day you have set to put the vape down too, if you have set one. Stopping the vape is its own second stage, and the app never treats the vape as the destination</td>
+    </tr>
+    <tr>
       <td><code>completed_prep_steps</code></td>
       <td>Which of the preparation steps <strong>you tick yourself</strong>, as short ids: <code>tell</code>, <code>help</code>, <code>clear</code>, <code>first-days</code>, <code>money</code>, and <code>prescriber</code> (that last one is only offered for cigarettes and heated tobacco). The other three steps on that screen — picking the day, writing your reason, learning your triggers — are worked out by the app from your profile and your log, and are not stored here</td>
     </tr>
